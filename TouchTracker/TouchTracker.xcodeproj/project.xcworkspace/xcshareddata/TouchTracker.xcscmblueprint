@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "0B843B18C1420C0FCA6050AD3180A99E9493554E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "0B843B18C1420C0FCA6050AD3180A99E9493554E" : 9223372036854775807,
+    "6E1E5AA360B088F8B27C23483EF3102F381337E3" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "50AE4141-4B5F-473C-81E4-CE240D2BAC1B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "0B843B18C1420C0FCA6050AD3180A99E9493554E" : "TouchTracker\/",
+    "6E1E5AA360B088F8B27C23483EF3102F381337E3" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "TouchTracker",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "TouchTracker\/TouchTracker.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/seabjackson\/TouchTracker.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0B843B18C1420C0FCA6050AD3180A99E9493554E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/seabjackson\/CookieCrush-Game.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6E1E5AA360B088F8B27C23483EF3102F381337E3"
+    }
+  ]
+}
