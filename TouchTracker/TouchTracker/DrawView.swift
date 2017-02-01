@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DrawView: UIView {
+class DrawView: UIView, UIGestureRecognizerDelegate {
     var currentLines = [NSValue: Line]()
     var finishedLines = [Line]()
     
@@ -61,6 +61,7 @@ class DrawView: UIView {
         addGestureRecognizer(longPressRecognizer)
         
         moveRecognizer = UIPanGestureRecognizer(target: self, action: #selector(DrawView.moveLine(_:)))
+        moveRecognizer.delegate = self
         moveRecognizer.cancelsTouchesInView = false
         addGestureRecognizer(moveRecognizer)
     }
@@ -199,6 +200,28 @@ class DrawView: UIView {
     
     func moveLine(_ gestureRecognizer: UIPanGestureRecognizer) {
         print("Recognized a pan")
+        
+        // if a line is selected
+        if let index = selectedLineIndex {
+            // when the pan recognizer changes its position
+            if gestureRecognizer.state == .changed {
+                // how far has the pan moved
+                let translation = gestureRecognizer.translation(in: self)
+                
+                // add the translation to the current beginning and end points of the line
+                finishedLines[index].begin.x += translation.x
+                finishedLines[index].begin.y += translation.y
+                finishedLines[index].end.x += translation.x
+                finishedLines[index].end.y += translation.y
+                
+                gestureRecognizer.setTranslation(CGPoint.zero, in: self)
+                // redraw the screen
+                setNeedsDisplay()
+            }
+        } else {
+            // if no line is selected don't do anything
+            return
+        }
     }
     
     // return the index of a line
@@ -236,6 +259,10 @@ class DrawView: UIView {
             // redraw everything
             setNeedsDisplay()
         }
+    }
+    
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
     }
 }
 
